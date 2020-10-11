@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends 'base.html' %}   <!-- base.html 불러오기 -->
+
+{% block contents %}
+<div class="container">
+    <br>
+    <div class="card text-center">
+        <div class="card-body">
+            <h3 class="card-title">{{details.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{details.pub_date}}</h6>
+            <p class="card-text">{{details.body}}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+</html>

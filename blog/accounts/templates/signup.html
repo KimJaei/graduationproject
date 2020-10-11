@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends 'base.html' %}   <!-- base.html 불러오기 -->
+
+{% block contents %}
+<br>
+<div class="container">
+
+    <h1>Sign Up</h1>
+
+    <form method="POST" action="{% url 'signup' %}">
+        {% csrf_token %}
+
+        Username :
+        <br>
+        <input name="username" type="text" value="">
+        (10글자 이하로 작성해주세요)
+        <br><br>
+
+        Firstname :
+        <br>
+        <input name="fistname" type="text" value="">
+        <br><br>
+
+        Lastname :
+        <br>
+        <input name="lastname" type="text" value="">
+        <br><br>
+
+        E-mail :
+        <br>
+        <input name="email" type="text" value="">
+        <br><br>
+
+        Password :
+        <br>
+        <input name="password1" type="password" value="">
+        <br><br>
+
+        Confirm Password :
+        <br>
+        <input name="password2" type="password" value="">
+        <br>
+
+
+        <br>
+        <input class="btn btn-primary" type="submit" value="Sign Up">
+    </form>
+</div>
+{% endblock %}
+
+</html>

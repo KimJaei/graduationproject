@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends 'base.html' %}   <!-- base.html 불러오기 -->
+
+{% block contents %}
+<br>
+<div class="pull-right">
+    <form class="form-inline my-2 my-lg-0 pull-right" action="{% url 'result' %}" method="GET">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" name="query">
+    <button class="btn btn-success my-2 my-sm-0" type="submit">검색</button>
+    </form>
+</div>
+
+<br>
+
+<div class="card text-center">
+    <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="card-body"></div>
+    <!-- for blog in blogs.all -> 전체 블로그 글을 대상으로 반복문 수행 -->
+    {% for blog in posts %}   <!-- 한 페이지를 대상으로 반복문 수행 -->
+    <div class="container">
+        <div class="list-group">
+            <a href="{% url 'detail' blog.id %}" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">{{blog.title}}</h5>
+                    <small class="text-muted">{{blog.pub_date}}</small>
+                </div>
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+
+    <br>
+
+    <div class="container">
+        <!-- 3 of 4 -->
+        <span>{{posts.number}}</span>
+        <span>of</span>
+        <span>{{posts.paginator.num_pages}}</span>
+    </div>
+</div>
+
+<br>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item">
+        <a class="page-link" href="?page=1">처음</a>
+        </li>
+        {% if posts.has_previous %}
+        <li class="page-item">
+        <a class="page-link" href="?page={{posts.previous_page_number}}">이전</a>
+        </li>
+        {% endif %}
+        
+        <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
+        <li class="page-item"><a class="page-link" href="?page=2">2</a></li>
+        <li class="page-item"><a class="page-link" href="?page=3">3</a></li>
+
+        {% if posts.has_next %}
+        <li class="page-item">
+        <a class="page-link" href="?page={{posts.next_page_number}}">다음</a>
+        </li>
+        {% endif %}
+        <li class="page-item">
+        <a class="page-link" href="?page={{posts.paginator.num_pages}}">마지막</a>
+        </li>
+    </ul>
+</nav>
+
+{% endblock %}
+
+</html>
