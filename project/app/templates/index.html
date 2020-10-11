@@ -21,7 +21,7 @@ color:	#696969;
 }
 .rdo-grp {
   position: center;
-<!--  background-color: #d1cff4;-->
+  background-color: #d1cff4;
 }
 .rdo-grp label {
   cursor: pointer;
@@ -121,9 +121,9 @@ input[type="submit"]:hover:before,button:hover:after{
 </style>
 
 
-<form action="{% url 'result' %}" method="POST">
+<form action="{% url 'result' %}" method="POST"> {% csrf_token %}
     <div class="rdo-grp">
-    <h2> 나의 성격유형에 어울리는 여행지는~?! </h2><br>
+    <h2> 나의 성격과 어울리는 여행타입은~?! </h2><br>
         <h4> Q1. 나는 먼 곳으로 여행가는 것을 좋아한다</h4>
 
     <input type="radio" name="q1" value="1" id="c1"/>

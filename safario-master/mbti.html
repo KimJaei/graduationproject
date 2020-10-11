@@ -73,75 +73,216 @@
 
   <section class="hero-banner-sm magic-ball magic-ball-banner" id="parallax-1" data-anchor-target="#parallax-1" data-300-top="background-position: 0px -80px" data-top-bottom="background-position: 0 100px">
     <div class="container">
-      <div class="hero-banner-sm-content">
-        <h1>Amenities</h1>
-        <p>Air seed winged lights saw kind whales in sixth best a dont seas dron image so fish all tree on</p>
-      </div>
 
 
+      <style>
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+ background-color: #f8f8ff;
+
+}
+h2{
+border: 8px double #7d64f7;
+  border-radius:5px;
+  box-shadow: 0 0 3px gray;
+  font-size: 30px;
 
 
+}
 
 
-          <form action="{% url 'result' %}" method="POST"> {% csrf_token %}
-    질문 1 : 먼 곳으로 여행가는 것을 좋아한다 <br>
-    <input type="radio" name="q1" value="1">
-    <label for="c1">그렇다</label>
-    <input type="radio" name="q1" value="2">
-    <label for="c2">아니다</label>
-    <br>
+h4{
+color:	#696969;
+font-size: 15px;
 
-    질문 2 : 여행은 세운 계획대로 진행되야한다 <br>
-    <input type="radio" name="q2" value="1">
-    <label for="c3">그렇다</label>
-    <input type="radio" name="q2" value="2">
-    <label for="c4">아니다</label>
-    <br>
+}
+.rdo-grp {
+  position: center;
+  background-color: #d1cff4;
+  width:500px;
+  height:885px;
+}
+.rdo-grp label {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  padding: 6px 8px;
+  border-radius: 20px;
+  float: left;
+  transition: all 0.2s ease;
+  font-size:14px;
 
-    질문 3 : 여행을 갔을때 그 지역의 유명 관광지는 꼭 방문해야한다 <br>
-    <input type="radio" name="q3" value="1">
-    <label for="c3">그렇다</label>
-    <input type="radio" name="q3" value="2">
-    <label for="c4">아니다</label>
-    <br>
+}
+.rdo-grp label:hover {
+  background: rgba(125,100,247,0.06);
+}
+.rdo-grp label:not(:last-child) {
+  margin-right: 16px;
+}
+.rdo-grp label span {
+  vertical-align: middle;
+}
+.rdo-grp label span:first-child {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  background: #e8eaed;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  margin-right: 8px;
+}
+.rdo-grp label span:first-child:after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin: 2px;
+  background: #fff;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+.rdo-grp label:hover span:first-child {
+  background: #7d64f7;
+}
+.rdo-grp input  {
+  display: none;
+}
+.rdo-grp input:checked + label span:first-child {
+  background: #7d64f7;
+}
+.rdo-grp input:checked + label span:first-child:after {
+  transform: scale(0.5);
+}
 
-    질문 4 : 여행에서 가장 중요한 것은 음식이다 <br>
-    <input type="radio" name="q4" value="1">
-    <label for="c3">그렇다</label>
-    <input type="radio" name="q4" value="2">
-    <label for="c4">아니다</label>
-    <br>
+input[type="submit"]{
+  background: #7d64f7;
+  color:#fff;
+  border: none;
+  border-radius:5px;
+  box-shadow: 0 0 5px gray;
+  position:relative;
+  height:50px;
+  font-size:1.0em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+input[type="submit"]:hover{
+  background:#f8f8ff;
+  color:#7d64f7;
+  text-align:right;
+}
+input[type="submit"]:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:50%;
+  background:#f8f8ff;
+  transition:400ms ease all;
+}
+input[type="submit"]:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+input[type="submit"]:hover:before,button:hover:after{
+  width:50%;
+  transition:800ms ease all;
+}
 
-    질문 5 : 새로운 곳으로 여행가는 것을 좋아한다<br>
-    <input type="radio" name="q5" value="1">
-    <label for="c3">그렇다</label>
-    <input type="radio" name="q5" value="2">
-    <label for="c4">아니다</label>
-    <br>
+}
 
-    질문 6 : 여행은 함께가는 것이 즐겁다 <br>
-    <input type="radio" name="q6" value="1">
-    <label for="c3">그렇다</label>
-    <input type="radio" name="q6" value="2">
-    <label for="c4">아니다</label>
-    <br>
 
-    질문 7 : 여행에서 숙소는 좋은 숙소로 가야한다 <br>
-    <input type="radio" name="q7" value="1">
-    <label for="c3">그렇다</label>
-    <input type="radio" name="q7" value="2">
-    <label for="c4">아니다</label>
-    <br>
+</style>
 
-    질문 8 : 여행에서 처음만난 사람과 쉽게 말을 나눌 수 있다 <br>g
-    <input type="radio" name="q8" value="1">
-    <label for="c3">그렇다</label>
-    <input type="radio" name="q8" value="2">
-    <label for="c4">아니다</label>
-    <br>
 
-    <input type="submit">
+<form action="{% url 'result' %}" method="POST">
+    <div class="rdo-grp">
+    <h2> 나의 성격과 어울리는 여행타입은~?! </h2><br><br>
+        <h4> Q1. 나는 먼 곳으로 여행가는 것을 좋아한다</h4>
+
+    <input type="radio" name="q1" value="1" id="c1"/>
+        <label for="c1"><span></span><span>YES</span></label>
+    <input type="radio" name="q1" value="2" id="c2"/>
+     <label for="c2"><span></span><span>NO</span></label>
+<br><br><br>
+
+        <h4>Q2. 나의 여행은 세운 계획대로 진행되어야한다 </h4>
+
+        <input type="radio" name="q2" value="1" id="c3">
+              <label for="c3"><span></span><span>YES</span></label>
+    <input type="radio" name="q2" value="2" id="c4"/>
+        <label for="c4"><span></span><span>NO</span></label>
+    <br><br><br>
+
+   <h4>Q3. 나는 여행을 갔을때 그 지역의 유명 관광지는 꼭 방문해야한다</h4>
+
+     <input type="radio" name="q3" value="1" id="c5">
+              <label for="c5"><span></span><span>YES</span></label>
+    <input type="radio" name="q3" value="2" id="c6"/>
+        <label for="c6"><span></span><span>NO</span></label>
+    <br><br><br>
+
+        <h4>Q4. 나에게 여행할 때 가장 중요한 것은 음식이다 <br></h4>
+
+    <input type="radio" name="q4" value="1" id="c7">
+              <label for="c7"><span></span><span>YES</span></label>
+    <input type="radio" name="q4" value="2" id="c8"/>
+        <label for="c8"><span></span><span>NO</span></label>
+    <br><br><br>
+
+        <h4>Q5. 나는 새로운 곳으로 여행가는 것을 좋아한다</h4>
+    <input type="radio" name="q5" value="1" id="c9">
+              <label for="c9"><span></span><span>YES</span></label>
+    <input type="radio" name="q5" value="2" id="c10"/>
+        <label for="c10"><span></span><span>NO</span></label>
+    <br><br><br>
+
+        <h4>Q6. 나는 누군가와 함께하는 여행이 더 즐겁다 <br></h4>
+    <input type="radio" name="q6" value="1" id="c11">
+              <label for="c11"><span></span><span>YES</span></label>
+    <input type="radio" name="q6" value="2" id="c12"/>
+        <label for="c12"><span></span><span>NO</span></label>
+    <br><br><br>
+
+        <h4>Q7. 나의 여행에서 좋은 숙소는 중요하다 <br></h4>
+    <input type="radio" name="q7" value="1" id="c13">
+              <label for="c13"><span></span><span>YES</span></label>
+    <input type="radio" name="q7" value="2" id="c14"/>
+        <label for="c14"><span></span><span>NO</span></label>
+    <br><br><br>
+
+        <h4>Q8. 나는 여행에서 처음만난 사람과 쉽게 말을 나눌 수 있다 <br></h4>
+    <input type="radio" name="q8" value="1" id="c15">
+              <label for="c15"><span></span><span>YES</span></label>
+    <input type="radio" name="q8" value="2" id="c16"/>
+        <label for="c16"><span></span><span>NO</span></label>
+    <br><br><br>
+        </div>
+    <br><br>
+    <input type="submit" class="button" value="결과 보러가기">
+
+
 </form>
+
+<script>
+
+}</script>
+
+
+
+
+
+
+
 
 
 
@@ -169,104 +310,6 @@
 
 
   <!-- ================ start footer Area ================= -->
-  <footer class="footer-area">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3  col-md-6 col-sm-6">
-          <div class="single-footer-widget">
-            <h6>About Agency</h6>
-            <p>
-              The world has become so fast paced that people don’t want to stand by reading a page of information to be  they would much rather look at a presentation and understand
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <div class="single-footer-widget">
-            <h6>Navigation Links</h6>
-            <div class="row">
-              <div class="col">
-                <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Feature</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Portfolio</a></li>
-                </ul>
-              </div>
-              <div class="col">
-                <ul>
-                  <li><a href="#">Team</a></li>
-                  <li><a href="#">Pricing</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3  col-md-6 col-sm-6">
-          <div class="single-footer-widget">
-            <h6>Newsletter</h6>
-            <p>
-              For business professionals caught between high OEM price and mediocre print and graphic output.
-            </p>
-            <div id="mc_embed_signup">
-              <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscription relative">
-                <div class="input-group d-flex flex-row">
-                  <input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
-                  <button class="btn bb-btn"><span class="lnr lnr-location"></span></button>
-                </div>
-                <div class="mt-10 info"></div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3  col-md-6 col-sm-6">
-          <div class="single-footer-widget mail-chimp">
-            <h6 class="mb-20">InstaFeed</h6>
-            <ul class="instafeed d-flex flex-wrap">
-              <li><img src="img/instagram/i1.jpg" alt=""></li>
-              <li><img src="img/instagram/i2.jpg" alt=""></li>
-              <li><img src="img/instagram/i3.jpg" alt=""></li>
-              <li><img src="img/instagram/i4.jpg" alt=""></li>
-              <li><img src="img/instagram/i5.jpg" alt=""></li>
-              <li><img src="img/instagram/i6.jpg" alt=""></li>
-              <li><img src="img/instagram/i7.jpg" alt=""></li>
-              <li><img src="img/instagram/i8.jpg" alt=""></li>
-            </ul>
-          </div>
-        </div>
-      </div>
 
-      <div class="footer-bottom">
-        <div class="row align-items-center">
-          <p class="col-lg-8 col-sm-12 footer-text m-0 text-center text-lg-left"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-          <div class="col-lg-4 col-sm-12 footer-social text-center text-lg-right">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-dribbble"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- ================ End footer Area ================= -->
-
-
-
-
-  <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
-  <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
-  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-  <script src="vendors/Magnific-Popup/jquery.magnific-popup.min.js"></script>
-  <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
-  <script src="js/jquery.ajaxchimp.min.js"></script>
-  <script src="js/mail-script.js"></script>
-  <script src="js/skrollr.min.js"></script>
-  <!-- <script src="js/countdown.js"></script> -->
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/main.js"></script>
 </body>
 </html>
