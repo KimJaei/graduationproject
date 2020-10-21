@@ -30,112 +30,112 @@ def new(request):
     if(request.POST.get('q1')=='1'):
         if (request.POST.get('q2') == '1'):
             if (request.POST.get('q3') == '1'):
-                f = open('뚜벅혼자관광.csv', 'a', newline='', encoding='utf-8')
+                f = open('static/뚜벅혼자관광.csv', 'a', newline='', encoding='utf-8')
                 wr = csv.writer(f)
                 wr.writerow([test.name, test.local, test.rating])
                 f.close()
 
                 warnings.filterwarnings('ignore')
-                data = pd.read_csv('뚜벅혼자관광.csv', encoding="utf-8", sep=",")
+                data = pd.read_csv('static/뚜벅혼자관광.csv', encoding="utf-8", sep=",")
             elif(request.POST.get('q3') == '2'):
-                f = open('뚜벅혼자휴양.csv', 'a', newline='', encoding='utf-8')
+                f = open('static/뚜벅혼자휴양.csv', 'a', newline='', encoding='utf-8')
                 wr = csv.writer(f)
                 wr.writerow([test.name, test.local, test.rating])
                 f.close()
 
                 warnings.filterwarnings('ignore')
-                data = pd.read_csv('뚜벅혼자휴양.csv', encoding="utf-8", sep=",")
+                data = pd.read_csv('static/뚜벅혼자휴양.csv', encoding="utf-8", sep=",")
         elif (request.POST.get('q2') == '2'):
             if (request.POST.get('q3') == '1'):
-                f = open('뚜벅2인관광.csv', 'a', newline='', encoding='utf-8')
+                f = open('static/뚜벅2인관광.csv', 'a', newline='', encoding='utf-8')
                 wr = csv.writer(f)
                 wr.writerow([test.name, test.local, test.rating])
                 f.close()
 
                 warnings.filterwarnings('ignore')
-                data = pd.read_csv('뚜벅2인관광.csv', encoding="utf-8", sep=",")
+                data = pd.read_csv('static/뚜벅2인관광.csv', encoding="utf-8", sep=",")
 
             elif (request.POST.get('q3') == '2'):
-                f = open('뚜벅2인휴양.csv', 'a', newline='', encoding='utf-8')
+                f = open('static/뚜벅2인휴양.csv', 'a', newline='', encoding='utf-8')
                 wr = csv.writer(f)
                 wr.writerow([test.name, test.local, test.rating])
                 f.close()
 
                 warnings.filterwarnings('ignore')
-                data = pd.read_csv('뚜벅2인휴양.csv', encoding="utf-8", sep=",")
+                data = pd.read_csv('static/뚜벅2인휴양.csv', encoding="utf-8", sep=",")
         elif (request.POST.get('q2') == '3'):
             if (request.POST.get('q3') == '1'):
-                f = open('뚜벅3인관광.csv', 'a', newline='', encoding='utf-8')
+                f = open('static/뚜벅3인관광.csv', 'a', newline='', encoding='utf-8')
                 wr = csv.writer(f)
                 wr.writerow([test.name, test.local, test.rating])
                 f.close()
 
                 warnings.filterwarnings('ignore')
-                data = pd.read_csv('뚜벅3인관광.csv', encoding="utf-8", sep=",")
+                data = pd.read_csv('static/뚜벅3인관광.csv', encoding="utf-8", sep=",")
 
             elif (request.POST.get('q3') == '2'):
-                f = open('뚜벅3인휴양.csv', 'a', newline='', encoding='utf-8')
+                f = open('static/뚜벅3인휴양.csv', 'a', newline='', encoding='utf-8')
                 wr = csv.writer(f)
                 wr.writerow([test.name, test.local, test.rating])
                 f.close()
 
                 warnings.filterwarnings('ignore')
-                data = pd.read_csv('뚜벅3인휴양.csv', encoding="utf-8", sep=",")
+                data = pd.read_csv('static/뚜벅3인휴양.csv', encoding="utf-8", sep=",")
 
     elif(request.POST.get('q1')=='2'):
         if (request.POST.get('q2') == '1'):
             if (request.POST.get('q3') == '1'):
-                f = open('자차혼자관광.csv', 'a', newline='', encoding='utf-8')
+                f = open('static/자차혼자관광.csv', 'a', newline='', encoding='utf-8')
                 wr = csv.writer(f)
                 wr.writerow([test.name, test.local, test.rating])
                 f.close()
 
                 warnings.filterwarnings('ignore')
-                data = pd.read_csv('자차혼자관광.csv', encoding="utf-8", sep=",")
+                data = pd.read_csv('static/자차혼자관광.csv', encoding="utf-8", sep=",")
             elif(request.POST.get('q3') == '2'):
-                f = open('자차혼자휴양.csv', 'a', newline='', encoding='utf-8')
+                f = open('static/자차혼자휴양.csv', 'a', newline='', encoding='utf-8')
                 wr = csv.writer(f)
                 wr.writerow([test.name, test.local, test.rating])
                 f.close()
 
                 warnings.filterwarnings('ignore')
-                data = pd.read_csv('자차혼자휴양.csv', encoding="utf-8", sep=",")
+                data = pd.read_csv('static/자차혼자휴양.csv', encoding="utf-8", sep=",")
         elif (request.POST.get('q2') == '2'):
             if (request.POST.get('q3') == '1'):
-                f = open('자차2인관광.csv', 'a', newline='', encoding='utf-8')
+                f = open('static/자차2인관광.csv', 'a', newline='', encoding='utf-8')
                 wr = csv.writer(f)
                 wr.writerow([test.name, test.local, test.rating])
                 f.close()
 
                 warnings.filterwarnings('ignore')
-                data = pd.read_csv('자차2인관광.csv', encoding="utf-8", sep=",")
+                data = pd.read_csv('static/자차2인관광.csv', encoding="utf-8", sep=",")
 
             elif (request.POST.get('q3') == '2'):
-                f = open('자차2인휴양.csv', 'a', newline='', encoding='utf-8')
+                f = open('static/자차2인휴양.csv', 'a', newline='', encoding='utf-8')
                 wr = csv.writer(f)
                 wr.writerow([test.name, test.local, test.rating])
                 f.close()
 
                 warnings.filterwarnings('ignore')
-                data = pd.read_csv('자차2인휴양.csv', encoding="utf-8", sep=",")
+                data = pd.read_csv('static/자차2인휴양.csv', encoding="utf-8", sep=",")
         elif (request.POST.get('q2') == '2'):
             if (request.POST.get('q3') == '3'):
-                f = open('자차3인관광.csv', 'a', newline='', encoding='utf-8')
+                f = open('static/자차3인관광.csv', 'a', newline='', encoding='utf-8')
                 wr = csv.writer(f)
                 wr.writerow([test.name, test.local, test.rating])
                 f.close()
 
                 warnings.filterwarnings('ignore')
-                data = pd.read_csv('자차3인관광.csv', encoding="utf-8", sep=",")
+                data = pd.read_csv('static/자차3인관광.csv', encoding="utf-8", sep=",")
 
             elif (request.POST.get('q3') == '2'):
-                f = open('자차3인휴양.csv', 'a', newline='', encoding='utf-8')
+                f = open('static/자차3인휴양.csv', 'a', newline='', encoding='utf-8')
                 wr = csv.writer(f)
                 wr.writerow([test.name, test.local, test.rating])
                 f.close()
 
                 warnings.filterwarnings('ignore')
-                data = pd.read_csv('자차3인휴양.csv', encoding="utf-8", sep=",")
+                data = pd.read_csv('static/자차3인휴양.csv', encoding="utf-8", sep=",")
 
 
     
