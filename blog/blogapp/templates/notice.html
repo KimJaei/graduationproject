@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
 {% extends 'base.html' %}   <!-- base.html 불러오기 -->
+{% block title %}- 공지사항{% endblock %}
 
-{% block contents %}
+{% block content %}
 <br>
 <div class="pull-right">
     <form class="form-inline my-2 my-lg-0 pull-right" action="{% url 'result' %}" method="GET">
@@ -83,5 +81,3 @@
 </nav>
 
 {% endblock %}
-
-</html>

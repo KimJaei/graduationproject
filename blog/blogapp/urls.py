@@ -10,5 +10,5 @@ urlpatterns = [
     path('create', views.create, name="create"),
     path('newblog/', views.blogpost, name="newblog"),
     path('notice/', views.notice, name="notice"),
-    path('result/', views.result, name="result")
+    path('result/', views.result, name="result"),
 ]

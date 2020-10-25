@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'blogapp.apps.BlogappConfig',
     'portfolio.apps.PortfolioConfig',
     'accounts.apps.AccountsConfig',
+    'c_type.apps.CTypeConfig',
 ]
 
 MIDDLEWARE = [
@@ -125,11 +126,12 @@ STATIC_URL = '/static/'
 
 # static 파일들이 현재 어디에 있는지를 쓰는 곳
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'portfolio', 'static')
+    os.path.join(BASE_DIR, 'portfolio', 'static'),
+    os.path.join(BASE_DIR, 'blogapp', 'static'),
 ]
 
 # static 파일들이 어디로 모일 것인지를 쓰는 곳
-STATIC_ROOT = os.path.join(BASE_DIR, 'static  ')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/admin')
 
 # URL 설계
 MEDIA_URL = '/media/'

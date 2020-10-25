@@ -1,0 +1,151 @@
+@charset "UTF-8";
+/* common */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button{margin:0;padding:0}
+body,input,textarea,select,table{font-family:'돋움',Dotum,Helvetica,sans-serif;font-size:12px}
+img,fieldset,button{border:0}
+hr{display:none}
+li{list-style:none}
+em,address{font-style:normal}
+a,a:link{text-decoration:none}
+a:hover,a:active,a:focus{text-decoration:none}
+.blind{visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:0;height:0;font-size:0;line-height:0}
+
+/* layout */
+.nc_widget2{overflow:hidden;width:100%;zoom:1}
+.nc_widget2 .nc_cont{overflow:hidden}
+.nc_widget2 .tab ul{overflow:hidden;padding-left:1%;background:no-repeat 50% 11px;zoom:1}
+.nc_widget2 .tab li{display:inline-block;float:left;width:49.5%;cursor:pointer}
+.nc_widget2 .tab li a{display:block;padding:10px 0 7px 12%;_padding-left:10%;background:no-repeat 68px 15px;font-size:11px;line-height:13px;_zoom:1}
+.nc_widget2 .tab li a span{font-size:11px;font-family:'돋움',dotum;letter-spacing:-1px}
+.nc_widget2 .tab li a strong{font-weight:normal;font-size:11px;font-family:Tahoma;letter-spacing:0}
+.nc_widget2 .tab1on .tab1 a strong{font-weight:bold}
+.nc_widget2 .tab2on .tab2 a strong{font-weight:bold;color:#b0b0b0}
+.nc_widget2 .ngb_lst ul{width:92%;margin:0 auto;padding-left:2%;*padding-left:2.1%;zoom:1}
+.nc_widget2 .ngb_lst ul:after{display:block;clear:both;content:''}
+.nc_widget2 .ngb_lst li{position:relative;float:left;width:24.5%;height:38px;text-align:center}
+.nc_widget2 .ngb_lst li div{display:inline-block;position:relative;width:35px;height:35px;margin:0 auto;vertical-align:top }
+.nc_widget2 .ngb_lst li a{display:inline-block;position:relative;width:35px;height:35px;vertical-align:top}
+.nc_widget2 .ngb_lst li a img{vertical-align:top}
+.nc_widget2 .ngb_lst li a span{display:block;position:absolute;top:0;left:0;width:33px;height:33px;border:1px solid #000;opacity:0.1;filter:alpha(opacity=10)}
+.nc_widget2 .ngb_lst li a .up{display:block;position:absolute;top:-2px;right:-2px;width:13px;height:11px;background:url(https://blogimgs.pstatic.net/buddyconnect/ico_up.gif) 0 0}
+.nc_widget2 .ngb_lst li a .up em{visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:0;height:0;font-size:0;line-height:0}
+.nc_widget2 .ngb_lst li a.del{position:absolute;right:0;_right:-1px;bottom:0;_bottom:-1px;width:11px;height:11px;background:#fd9530 url(https://blogimgs.pstatic.net/buddyconnect/btn_nc_del.gif) no-repeat}
+.nc_widget2 .ngb_lst li a.del span{visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:0;height:0;font-size:0;line-height:0}
+.nc_widget2 .paging{padding:7px 6% 7px 0;font-size:0;line-height:0;text-align:right;zoom:1}
+.nc_widget2 .paging span{display:inline-block;margin-right:8px;font-size:11px;font-family:Tahoma;line-height:19px;vertical-align:top}
+.nc_widget2 .paging span em{font-size:9px}
+.nc_widget2 .paging span strong{font-weight:normal;font-family:Tahoma;font-size:11px}
+.nc_widget2 .paging .prev,.nc_widget2 .paging .next{display:inline-block;width:20px;height:20px;margin-right:0;*margin-left:-1px;background:no-repeat 0 0}
+.nc_widget2 .paging .prev em,.nc_widget2 .paging .next em{visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:0;height:0;font-size:0;line-height:0}
+.nc_widget2 .paging .prev{background-position:0 -20px}
+.nc_widget2 .paging .prev_off{background-position:0 0}
+.nc_widget2 .paging .next{width:21px;background-position:-20px -20px}
+.nc_widget2 .paging .next_off{width:21px;background-position:-20px 0}
+.nc_widget2 .nc_btns{overflow:hidden;padding:5px 6px 5px 7px}
+.nc_widget2 .nc_btns a{display:inline-block}
+.nc_widget2 .nc_btns .btn_group{float:left}
+.nc_widget2 .nc_btns .btn_group2{float:right}
+.nc_widget2 .nc_btns a.add img{margin-right:3px}
+.nc_widget2 .nc_btns a.adm{margin-right:3px}
+.nc_widget2 .nc_info{height:173px;margin:-1px 5px 0;_margin-top:0;text-align:center}
+.nc_widget2 .nc_info p{margin:42px 0 0;font-size:11px;color:#999;letter-spacing:-1px;line-height:16px}
+.nc_widget2 .nc_info a{display:inline-block;margin-top:14px;font-size:11px;color:#75bc61;letter-spacing:-1px;line-height:15px;text-decoration:underline}
+.nc_widget2 .nc_info2 p{margin-top:65px}
+.nc_widget2 .nc_info3 p{margin-top:27px}
+.nc_widget2 .nc_info3 a{margin-top:15px;background:url(https://blogimgs.pstatic.net/buddyconnect/ico_arr.gif) no-repeat 71px 20px}
+.nc_widget2 .nc_info4{position:relative;height:235px;margin:-1px 5px 0;_margin-top:0;text-align:center}
+.nc_widget2 .nc_info4 p{margin:28px 0 24px;font-size:11px;color:#999;letter-spacing:-1px}
+.nc_widget2 .nc_info4 .pwr{width:144px;height:16px;margin:0 auto;background:no-repeat 0 0}
+.nc_widget2 .nc_info4 .pwr span{visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:0;height:0;font-size:0;line-height:0}
+.nc_widget2 .nc_info4 .more{display:inline-block;position:absolute;bottom:9px;right:11px;padding-right:4px;background:url(https://blogimgs.pstatic.net/buddyconnect/ico_arr2.gif) no-repeat 100% 3px;font-size:11px;color:#999;letter-spacing:-1px;text-decoration:underline}
+.nc_widget2 .nc_info4 .pwr_lst{overflow:hidden;position:relative;width:96%;margin:5px auto 10px}
+.nc_widget2 .nc_info4 .pwr_lst li{overflow:hidden;float:left;position:relative;width:33%;height:60px;margin:0 0 1px;text-align:center;white-space:nowrap;line-height:normal}
+.nc_widget2 .nc_info4 .pwr_lst li a{display:block;position:relative;margin:0 auto 5px;width:40px;zoom:1}
+.nc_widget2 .nc_info4 .pwr_lst li a img{vertical-align:top}
+.nc_widget2 .nc_info4 .pwr_lst li a .name{overflow:hidden;display:block;width:40px;margin-top:4px;font-size:11px;color:#999;letter-spacing:-1px}
+.nc_widget2 .nc_info4 .pwr_lst li a .mask{display:block;position:absolute;top:0;left:0;z-index:2;width:38px;height:38px;border:1px solid #000;opacity:0.1;-ms-filter:'alpha(opacity=10)';filter:alpha(opacity=10)}
+.nc_eng2 .tab li a{padding-top:7px;padding-bottom:6px;line-height:15px}
+.nc_eng2 .tab li a span{font-family:Tahoma;letter-spacing:0}
+.nc_eng2 .tab1on .tab1 a span,.nc_eng2 .tab2on .tab2 a span{font-weight:bold}
+
+/* colour variations */
+.nc_light .tab ul{background-image:url(https://blogimgs.pstatic.net/buddyconnect/line_skin20_v.gif)}
+.nc_light .tab li a span{color:#b0b0b0}
+.nc_light .tab li a strong{color:#b2b2b2}
+.nc_light .nc_cont{border:1px solid #dfdfdf;background:#fff}
+.nc_light .paging .prev,.nc_light .paging .next{background-image:url(https://blogimgs.pstatic.net/buddyconnect/btn_skin20_pgn.gif)}
+.nc_light .nc_btns a.new img{background:url(https://blogimgs.pstatic.net/buddyconnect/btn_skin20_new_2.png) no-repeat 0 0;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://blogimgs.pstatic.net/buddyconnect/btn_skin20_new_2.png',sizingMethod='image')}
+.nc_light .nc_btns a.adm img{background:url(https://blogimgs.pstatic.net/buddyconnect/btn_skin20_adm_2.png) no-repeat 0 0;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://blogimgs.pstatic.net/buddyconnect/btn_skin20_adm_2.png',sizingMethod='image')}
+.nc_light .nc_btns a.inst img{background:url(https://blogimgs.pstatic.net/buddyconnect/btn_skin20_dnld_2.png) no-repeat 0 0;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://blogimgs.pstatic.net/buddyconnect/btn_skin20_dnld_2.png',sizingMethod='image')}
+.nc_light .paging span{color:#999}
+.nc_light .paging span strong{color:#545454}
+.nc_light .nc_info,.nc_light .nc_info4{border-top:1px solid #f4f4f4}
+.nc_light .nc_info4 .pwr{background-image:url(https://blogimgs.pstatic.net/buddyconnect/p_skin20_pwrblog.gif)}
+
+/* 0414 LJI */
+.fresh_view{position:relative;width:142px;margin:0 auto;padding:8px 0 7px;border-top:1px solid #f0f0f0;}
+.fresh_view a{margin-left:-1px;font-size:11px;letter-spacing:-1px;color:#999;line-height:11px}
+.fresh_view a img{margin:0 0 3px 3px;vertical-align:middle}
+.fresh_view a strong{font-size:11px;letter-spacing:0;font-weight:normal;}
+
+.nc_skin21 .tab1on .tab1 span,.nc_skin21 .tab2on .tab2 span{color:#5fc95c !important}
+.nc_skin21 .tab1on .tab1 strong,.nc_skin21 .tab2on .tab2 strong{color:#4ab12a !important}
+.nc_skin21 .tab1on .tab1 a,.nc_skin21 .tab2on .tab2 a{background-image:url(https://blogimgs.pstatic.net/buddyconnect/ico_skin21_arr.gif)}
+.nc_skin21 .nc_btns .btn_group a.add img{background:url(https://blogimgs.pstatic.net/buddyconnect/btn_skin21_add_2.png) no-repeat 0 0;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://blogimgs.pstatic.net/buddyconnect/btn_skin21_add_2.png',sizingMethod='image')}
+.nc_skin21 .fresh_view a strong{color:#5fc95c !important}
+
+.nc_skin22 .tab1on .tab1 span,.nc_skin22 .tab2on .tab2 span{color:#f59815 !important}
+.nc_skin22 .tab1on .tab1 strong,.nc_skin22 .tab2on .tab2 strong{color:#ff7c00 !important}
+.nc_skin22 .tab1on .tab1 a,.nc_skin22 .tab2on .tab2 a{background-image:url(https://blogimgs.pstatic.net/buddyconnect/ico_skin22_arr.gif)}
+.nc_skin22 .nc_btns .btn_group a.add img{background:url(https://blogimgs.pstatic.net/buddyconnect/btn_skin22_add_2.png) no-repeat 0 0;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://blogimgs.pstatic.net/buddyconnect/btn_skin22_add_2.png',sizingMethod='image')}
+.nc_skin22 .fresh_view a strong{color:#f59815 !important}
+
+.nc_skin23 .tab1on .tab1 span,.nc_skin23 .tab2on .tab2 span{color:#4bbfc1 !important}
+.nc_skin23 .tab1on .tab1 strong,.nc_skin23 .tab2on .tab2 strong{color:#43b6b9 !important}
+.nc_skin23 .tab1on .tab1 a,.nc_skin23 .tab2on .tab2 a{background-image:url(https://blogimgs.pstatic.net/buddyconnect/ico_skin23_arr.gif)}
+.nc_skin23 .nc_btns .btn_group a.add img{background:url(https://blogimgs.pstatic.net/buddyconnect/btn_skin23_add_2.png) no-repeat 0 0;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://blogimgs.pstatic.net/buddyconnect/btn_skin23_add_2.png',sizingMethod='image')}
+.nc_skin23 .fresh_view a strong{color:#4bbfc1 !important}
+
+.nc_skin24 .tab1on .tab1 span,.nc_skin24 .tab2on .tab2 span{color:#747474 !important}
+.nc_skin24 .tab1on .tab1 strong,.nc_skin24 .tab2on .tab2 strong{color:#444 !important}
+.nc_skin24 .tab1on .tab1 a,.nc_skin24 .tab2on .tab2 a{background-image:url(https://blogimgs.pstatic.net/buddyconnect/ico_skin24_arr.gif)}
+.nc_skin24 .nc_btns .btn_group a.add img{background:url(https://blogimgs.pstatic.net/buddyconnect/btn_skin24_add_2.png) no-repeat 0 0;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://blogimgs.pstatic.net/buddyconnect/btn_skin24_add_2.png',sizingMethod='image')}
+.nc_skin24 .fresh_view a strong{color:#747474 !important}
+
+.nc_dark .tab ul{background-image:url(https://blogimgs.pstatic.net/buddyconnect/line_skin20_v2.gif)}
+.nc_dark .tab li a span{color:#767676}
+.nc_dark .tab li a strong{color:#767676}
+.nc_dark .nc_cont{border:1px solid #333;background:#414141}
+.nc_dark .paging .prev,.nc_dark .paging .next{background-image:url(https://blogimgs.pstatic.net/buddyconnect/btn_skin20_pgn2.gif)}
+.nc_dark .nc_btns a.new img{background:url(https://blogimgs.pstatic.net/buddyconnect/btn_skin20_new2_2.png) no-repeat 0 0;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://blogimgs.pstatic.net/buddyconnect/btn_skin20_new2_2.png',sizingMethod='image')}
+.nc_dark .nc_btns a.adm img{background:url(https://blogimgs.pstatic.net/buddyconnect/btn_skin20_adm2_2.png) no-repeat 0 0;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://blogimgs.pstatic.net/buddyconnect/btn_skin20_adm2_2.png',sizingMethod='image')}
+.nc_dark .nc_btns a.inst img{background:url(https://blogimgs.pstatic.net/buddyconnect/btn_skin20_dnld2_2.png) no-repeat 0 0;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://blogimgs.pstatic.net/buddyconnect/btn_skin20_dnld2_2.png',sizingMethod='image')}
+.nc_dark .paging span{color:#666}
+.nc_dark .paging span strong{color:#a8a8a8}
+.nc_dark .nc_info,.nc_dark .nc_info4{border-top:1px solid #494949}
+.nc_dark .nc_info4 .pwr{background-image:url(https://blogimgs.pstatic.net/buddyconnect/p_skin20_pwrblog2.gif)}
+.nc_dark .fresh_view{border-top:1px solid #555;}
+
+.nc_skin25 .tab1on .tab1 span,.nc_skin25 .tab2on .tab2 span{color:#3f971e !important}
+.nc_skin25 .tab1on .tab1 strong,.nc_skin25 .tab2on .tab2 strong{color:#4bbd24 !important}
+.nc_skin25 .tab1on .tab1 a,.nc_skin25 .tab2on .tab2 a{background-image:url(https://blogimgs.pstatic.net/buddyconnect/ico_skin25_arr.gif)}
+.nc_skin25 .nc_btns .btn_group a.add img{background:url(https://blogimgs.pstatic.net/buddyconnect/btn_skin25_add_2.png) no-repeat 0 0;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://blogimgs.pstatic.net/buddyconnect/btn_skin25_add_2.png',sizingMethod='image')}
+.nc_skin25 .fresh_view a strong{color:#3f971e !important}
+
+.nc_skin26 .tab1on .tab1 span,.nc_skin26 .tab2on .tab2 span{color:#cd6e18 !important}
+.nc_skin26 .tab1on .tab1 strong,.nc_skin26 .tab2on .tab2 strong{color:#e87100 !important}
+.nc_skin26 .tab1on .tab1 a,.nc_skin26 .tab2on .tab2 a{background-image:url(https://blogimgs.pstatic.net/buddyconnect/ico_skin26_arr.gif)}
+.nc_skin26 .nc_btns .btn_group a.add img{background:url(https://blogimgs.pstatic.net/buddyconnect/btn_skin26_add_2.png) no-repeat 0 0;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://blogimgs.pstatic.net/buddyconnect/btn_skin26_add_2.png',sizingMethod='image')}
+.nc_skin26 .fresh_view a strong{color:#cd6e18 !important}
+
+.nc_skin27 .tab1on .tab1 span,.nc_skin27 .tab2on .tab2 span{color:#21989a !important}
+.nc_skin27 .tab1on .tab1 strong,.nc_skin27 .tab2on .tab2 strong{color:#1eb2b4 !important}
+.nc_skin27 .tab1on .tab1 a,.nc_skin27 .tab2on .tab2 a{background-image:url(https://blogimgs.pstatic.net/buddyconnect/ico_skin27_arr.gif)}
+.nc_skin27 .nc_btns .btn_group a.add img{background:url(https://blogimgs.pstatic.net/buddyconnect/btn_skin27_add_2.png) no-repeat 0 0;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://blogimgs.pstatic.net/buddyconnect/btn_skin27_add_2.png',sizingMethod='image')}
+.nc_skin27 .fresh_view a strong{color:#21989a !important}
+
+.nc_skin28 .tab1on .tab1 span,.nc_skin28 .tab2on .tab2 span{color:#adadad !important}
+.nc_skin28 .tab1on .tab1 strong,.nc_skin28 .tab2on .tab2 strong{color:#c9c9c9 !important}
+.nc_skin28 .tab1on .tab1 a,.nc_skin28 .tab2on .tab2 a{background-image:url(https://blogimgs.pstatic.net/buddyconnect/ico_skin28_arr.gif)}
+.nc_skin28 .nc_btns .btn_group a.add img{background:url(https://blogimgs.pstatic.net/buddyconnect/btn_skin28_add_2.png) no-repeat 0 0;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://blogimgs.pstatic.net/buddyconnect/btn_skin28_add_2.png',sizingMethod='image')}
+.nc_skin28 .fresh_view a strong{color:#adadad !important}

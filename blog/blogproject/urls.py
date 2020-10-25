@@ -22,6 +22,7 @@ from django.conf.urls.static import static
 import blogapp.views
 import portfolio.views
 import accounts.views
+import c_type.views
 
 # path('~의 url이 입력되면', ~에있는 함수를 띄워라.)
 urlpatterns = [
@@ -30,6 +31,7 @@ urlpatterns = [
     path('blog/', include('blogapp.urls')) ,  # blog/하면 blogapp.urls에서 url불러옴
     path('portfolio/', include('portfolio.urls')),
     path('accounts/', include('accounts.urls')),
+    path('c_type/', include('c_type.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 로 해도 된다.

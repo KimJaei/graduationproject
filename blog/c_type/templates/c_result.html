@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>여행타입 테스트</title>
+  {% load static %}
+<head>
+    <link rel="icon" href="{% static 'img/Fevicon.png' %}" type="image/png">
+
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="{% static 'vendors/bootstrap/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/fontawesome/css/all.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/themify-icons/themify-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/linericon/style.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/flat-icon/font/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/nice-select/nice-select.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  <script src="{% static 'vendors/jquery/jquery-3.2.1.min.js' %}"></script>
+  <script src="{% static 'vendors/bootstrap/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'vendors/nice-select/jquery.nice-select.min.js' %}"></script>
+  <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+  <script src="{% static 'js/mail-script.js' %}"></script>
+  <script src="{% static 'js/skrollr.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+    <style>
+        body {
+        font-family: sans-serif;
+        }
+
+        h2{
+        color: white;
+        padding-top: 30px;
+        font-size: 50px;
+        }
+
+        #div1{
+        text-align: center;
+        background-color: #a39ffa;
+        }
+
+        #div1 p{
+        font-size: 25px;
+        padding-bottom: 20px;
+        color: white;
+        }
+
+        #div2{
+        font-size: 23px;
+        text-align: center;
+        padding-top: 75px;
+        }
+    </style>
+</head>
+
+<body class="bg-shape">
+  <header class="header_area">
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container box_1620">
+          <a class="navbar-brand logo_h" href="{% url 'index' %}">
+              <a class="button" href="{% url 'index' %}">또바기</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav justify-content-end">
+              <li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">HOME</a></li>
+              {% if user.is_authenticated %}
+              <li class="nav-item"><a class="nav-link" href="#" class="nav-link">반갑습니다, {{user.get_username}}님!</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">로그아웃</a></li>
+              {% else %}
+              <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">로그인</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'signup' %}">회원가입</a>
+              {% endif %}
+              <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false">추천 테스트</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">여행지 추천</a>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'mbti' %}">성격유형</a>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'portfolio' %}">커뮤니티</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'notice' %}">공지사항</a></li>
+            </ul>
+          </div> 
+        </div>
+      </nav>
+    </div>
+  </header>
+  
+    <div class="container" style="position:relative; top:100px;">
+        <div id="div1">
+            <h2 >여행타입 테스트 결과 🚅</h2>
+            <p >"{{title}}"</p>
+        </div>
+        <div class="row" id="div2">
+            <strong style="color:black;">
+                <p>{{user.get_username}}님의 여행타입 테스트 결과는 "{{title}}" 로 나왔습니다!
+                <br>
+                또바기에서 {{user.get_username}}님께 추천드리는 여행:
+                </p>{{c_result}}
+            </strong>
+        </div>
+    </div>
+
+</body>
+</html>
